@@ -10,7 +10,7 @@
 <body>
     <div class="form login"> 
         <div class="form-content">
-            <header>Login</header>
+            <header>Sign In</header>
             <form id="signIn" action="#">
                 <div class="field input-field">
                     <input id="mailIn" type="email" placeholder="Email" class="input">
@@ -33,4 +33,23 @@
         </div>
     </div>
 </body>
+<script>
+    let customers=JSON.parse(localStorage.getItem("customers"));
+    if(customers==null){
+        customers=[];
+    }
+    let signInForm=document.getElementById("signIn");
+    signInForm.addEventListener("submit",()=>{
+        console.log(customers)
+        for(let customer of customers){
+            if(signInForm.mailIn.value==customer.email && signInForm.passIn.value==customer.pass ){
+                alert(`Very welcome ${customer.name}`);
+                break;
+            }
+            else{
+                alert("wrong credentials")
+            }
+        }
+    })
+</script>
 </html>

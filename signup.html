@@ -13,8 +13,11 @@
     <div id="signUpForm" class="form Signup">
         <div class="form-content">
             <p style="color: green; text-align: center;" id="message"></p>
-            <header>Signup</header>
+            <header>Create Account</header>
             <form id="signUp" action="#">
+                <div class="field input-field">
+                    <input id="name" type="text" placeholder="Name" class="name">
+                </div>
                 <div class="field input-field">
                     <input id="mail" type="email" placeholder="Email" class="input">
                 </div>
@@ -37,5 +40,41 @@
     </div>
 
 </body>
+<script>
+
+    let customers=JSON.parse(localStorage.getItem("customers"));
+    if(customers==null){
+        customers=[];
+    }
+    let formData=document.querySelector("form");
+    formData.addEventListener("submit",()=>{
+        let name=formData.name.value;
+        let email=formData.mail.value;
+        let flag=false;
+        for(let customer of customers){
+            if(customer.email==email){
+                flag=true;
+                break;
+            }
+        }
+        if(flag){
+            alert(`${email} has already been used`);
+            return
+        }
+        let phone=formData.phone.value;
+        let pass=formData.pass.value;
+        
+        if(phone.length==0 || name.length==0){
+            alert("please enter the required fields!");
+            return;
+        }
+        let obj={name,email,phone,pass};
+        customers.push(obj);
+        console.log(obj)
+        localStorage.setItem("customers",JSON.stringify(customers));
+        console.log(customers)
+    })
+</script>
 
 </html>
+ <!-- localStorage.setItem("formData", JSON.stringify(userData)); -->

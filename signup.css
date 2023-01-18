@@ -1,32 +1,36 @@
 #signUpForm{
     margin: auto;
-    max-width: 600px;
+    max-width: 450px;
     /* padding: 30px; */
-    border: 2px solid red;
-    /* background-color: blueviolet; */
+    /* border: 2px solid red; */
+    /* background-color:rgb(128, 128, 128); */
+    background-color: wheat;
 }
 .form-content{
     max-width: 430px;
     width: 100%;
     padding: 30px;
     border-radius: 6px;
-    background: white;
+    /* background: white; */
     /* border: 2px solid#0171d3; */
-    /* margin: auto; */
+    margin: auto;
+    margin-left: 10px;
 }
 header{
     font-size: 28px;
     font-weight: 600;
     text-align: center;
     color: black;
+    margin-right: 50px;
 }
 form {
     margin-top: 30px;
 }
 form .field{
     height: 50px;
-    width: 100%;
+    width: 80%;
     margin-top: 20px;
+    /* border: #0171d3; */
 }
 
 .field input,
@@ -52,16 +56,19 @@ form .field{
 .form-link{
     text-align: center;
     margin-top: 10px;
+    margin-right: 10px;
 }
 .login-link input{
     position: relative;
     margin-top: 20px;
     justify-content: center;
-    margin-left: 5px;
-    padding: 17px 150px;
+    margin-left: 60px;
+    padding: 17px 100px;
     border-radius: 10px;
-    border: none;
+    border: rebeccapurple;
     font-size: large;
+    color: white;
+    background-color: rgb(0, 125, 109);
 }
 .form-link span,
 .form-link a{
@@ -70,7 +77,7 @@ form .field{
 }
 form a{
     text-decoration: none;
-    color: #0171d3;
+    color: blue;
 }
 
 form a:hover{
