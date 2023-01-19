@@ -5,10 +5,74 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Men's Page</title>
-    <link rel="stylesheet" href="./styles/men.css">
+    <link rel="stylesheet" href="./styles/men.css" />
   </head>
   <body>
     <div id="navbar"></div>
+    <div id="add1">
+      <!-- 1 -->
+      <div>
+        <img
+          src="https://cdn.pixabay.com/photo/2014/10/22/18/04/man-498473__340.jpg"
+          alt="error"
+        />
+      </div>
+      <!-- 2 -->
+      <div>
+        <div>
+          <div>
+            <p style="font-size: 27px">SEIZE</p>
+            <div class="verticalTxt">
+              <p>THE</p>
+              <p>FREEZE</p>
+            </div>
+          </div>
+          <div>
+            <h5>SAVE UP TO</h5>
+            <h1>75%</h1>
+          </div>
+        </div>
+        <div>
+          <p>shop the sale</p>
+        </div>
+      </div>
+      <!-- 3 -->
+      <div>
+        <img
+          src="https://media.istockphoto.com/id/177242232/photo/portrait-of-enthusiastic-woman-carrying-skis-in-snowy-field.jpg?b=1&s=170667a&w=0&k=20&c=UqzuCi4nJEc63a-WQKPQBjGFTGoygkTXHmvibluoBrs="
+          alt="error"
+        />
+      </div>
+      <!-- 4 -->
+      <div>
+        <div>
+          <div>
+            <h2>LIMITED TIME OFFER</h2>
+            <h1>FREE SHIPPING</h1>
+          </div>
+          <div>
+            <h4>WITH ORDERS OVER $99'</h4>
+            <p>*Valid on Ground Shipping only</p>
+          </div>
+        </div>
+        <div>
+          <p>get details</p>
+        </div>
+      </div>
+      <!-- 5 -->
+      <div>
+        <div>
+          <p>$</p>
+          <p>30</p>
+          <p>Reward</p>
+        </div>
+        <p>WHEN YOU SPEND $100 OR MORE</p>
+        <div>
+          <p>get details</p>
+        </div>
+      </div>
+          
+    </div>
     <div id="main_content">
       <div id="heading"><h1>All Men</h1></div>
       <div id="master_content">
@@ -144,8 +208,6 @@
           <div id="item"></div>
         </div>
       </div>
-      <div id="footer_part1"></div>
-      <div id="footer_part2"></div>
     </div>
   </body>
 </html>
@@ -170,10 +232,9 @@
 
       let img = document.createElement("img");
       img.src = el.imgURL;
-      img.addEventListener("mouseover", function(e) {
+      img.addEventListener("mouseover", function (e) {
         img.src = el.img2;
       });
-      
 
       let name = document.createElement("p");
       name.innerText = el.name;
