@@ -1,0 +1,37 @@
+[
+    {
+        "id":1,
+        "name":"Deepak",
+        "isAdmin":true,
+        "password":"Pass1994",
+        "Email":"deepakyad18@gmail.com"
+    },
+    {
+        "id":2,
+        "name":"Ritesh",
+        "isAdmin":true,
+        "password":"ritesh123",
+        "Email":"ritesh123@gmail.com"
+    },
+    {
+        "id":3,
+        "name":"Prem",
+        "isAdmin":true,
+        "password":"prem123",
+        "Email":"prem123@gmail.com"
+    },
+    {
+        "id":4,
+        "name":"Kirti",
+        "isAdmin":true,
+        "password":"kirti123",
+        "Email":"kirti123@gmail.com"
+    },
+    {
+        "id":5,
+        "name":"Mohammad",
+        "isAdmin":true,
+        "password":"Mohhammad123",
+        "Email":"mohammad123@gmail.com"
+    }
+]
