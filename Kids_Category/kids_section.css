@@ -181,12 +181,11 @@ hr {
 
 /* ************************************************************* */
 #main {
-    border: 1px solid black;
+    /* border: 1px solid black; */
     display: flex;
     width: 95%;
     margin: auto;
     justify-content: space-around;
-    /* height: 300px; */
     margin-top: 40px;
 }
 
@@ -194,7 +193,7 @@ hr {
     padding: 0px 10px;
     width: 20%;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     margin-bottom: 50px;
     /* font-weight: bold; */
 }
@@ -202,11 +201,6 @@ hr {
 #filterBox>p {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-weight: bold;
-}
-
-#productBox {
-    width: 77%;
-    border: 1px solid green;
 }
 
 #centerFilterBox_Home {
@@ -318,16 +312,36 @@ summary {
     font-weight: bold;
 }
 
+#lastBox>a {
+    color: rgb(5, 116, 207);
+}
+
 /* ************************************************** */
+
+#productBox {
+    width: 77%;
+    /* border: 1px solid green; */
+}
+
 #productBox_head {
-    border: 1px solid red;
+    /* border: 1px solid red; */
     font-size: 20px;
     display: flex;
     justify-content: flex-end;
     align-items: center;
     padding: 20px;
 }
-
+#productBox_head>p{
+    /* margin-left: 20px; */
+    padding: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: bold;
+    border: none;
+    background-color: #f0f0f0;
+    color: #292929;
+}
 #productBox_head>select {
     margin-left: 20px;
     padding: 10px;
@@ -337,4 +351,49 @@ summary {
     border: none;
     background-color: #f0f0f0;
     color: #292929;
+}
+
+#productBox_body {
+    /* border: 1px solid blue; */
+    width: 100%;
+    margin: auto;
+    display: grid;
+    height: fit-content;
+    grid-template-columns: repeat(4,1fr);
+    column-gap: 1.3%;
+    row-gap: 1.4%;
+}
+.card{
+    /* border: 1px solid teal; */
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+    
+.cardImage>img{
+    width: 100%;
+}
+.cardDetails{
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    padding: 5px;
+    /* border: 1px solid red; */
+    line-height: 23px;
+}
+.cardDetails>a:nth-child(1){
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+.cardDetails>a:nth-child(1):hover,.cardDetails>a:nth-child(3):hover{
+    text-decoration: underline;
+}
+.cardDetails>a:nth-child(3){
+    text-decoration: none;
+    color: black;
+}
+
+.cardDetails>span:nth-child(5){
+    font-weight: bold;
+    color: red;
+}
+.cardDetails>span:nth-child(6){
+    color: rgb(92, 92, 92);
 }
