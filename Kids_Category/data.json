@@ -1,0 +1,112 @@
+[
+    {
+        "id": 1,
+        "image": "https://res.cloudinary.com/eastern/image/upload/w_1000,q_auto,f_auto/2076891_001_main.jpg",
+        "name": "ADIDAS Girls' Fleece Hooded Pullover",
+        "brand": "ADIDAS",
+        "discount_price": 31.98,
+        "original_price": 45.00,
+        "gender": "girls",
+        "size": "small",
+        "color": "black"
+    },
+    {
+        "id": 2,
+        "image": "https://res.cloudinary.com/eastern/image/upload/w_1000,q_auto,f_auto/2076891_001_main.jpg",
+        "name": "ADIDAS Girls' Fleece Hooded Pullover",
+        "brand": "ADIDAS",
+        "discount_price": 34.23,
+        "original_price": 45.00,
+        "gender": "girls",
+        "size": "small",
+        "color": "black"
+    },
+    {
+        "id": 3,
+        "image": "https://res.cloudinary.com/eastern/image/upload/w_1000,q_auto,f_auto/2076891_001_main.jpg",
+        "name": "ADIDAS Girls' Fleece Hooded Pullover",
+        "brand": "ADIDAS",
+        "discount_price": 564.55,
+        "original_price": 45.00,
+        "gender": "girls",
+        "size": "small",
+        "color" : "black"
+    },
+    {
+        "id": 4,
+        "image": "https://res.cloudinary.com/eastern/image/upload/w_1000,q_auto,f_auto/2076891_001_main.jpg",
+        "name": "ADIDAS Girls' Fleece Hooded Pullover",
+        "brand": "ADIDAS",
+        "discount_price": 7667.98,
+        "original_price": 45.00,
+        "gender": "girls",
+        "size": "small",
+        "color" : "black"
+    },
+    {
+        "id": 5,
+        "image": "https://res.cloudinary.com/eastern/image/upload/w_1000,q_auto,f_auto/2076891_001_main.jpg",
+        "name": "ADIDAS Girls' Fleece Hooded Pullover",
+        "brand": "ADIDAS",
+        "discount_price": 765.98,
+        "original_price": 45.00,
+        "gender": "girls",
+        "size": "small",
+        "color" : "black"
+    },
+    {
+        "id": 6,
+        "image": "https://res.cloudinary.com/eastern/image/upload/w_1000,q_auto,f_auto/2076891_001_main.jpg",
+        "name": "ADIDAS Girls' Fleece Hooded Pullover",
+        "brand": "ADIDAS",
+        "discount_price": 11.98,
+        "original_price": 45.00,
+        "gender": "girls",
+        "size": "small",
+        "color" : "black"
+    },
+    {
+        "id": 7,
+        "image": "https://res.cloudinary.com/eastern/image/upload/w_1000,q_auto,f_auto/2076891_001_main.jpg",
+        "name": "ADIDAS Girls' Fleece Hooded Pullover",
+        "brand": "ADIDAS",
+        "discount_price": 987.98,
+        "original_price": 45.00,
+        "gender": "girls",
+        "size": "small",
+        "color" : "black"
+    },
+    {
+        "id": 8,
+        "image": "https://res.cloudinary.com/eastern/image/upload/w_1000,q_auto,f_auto/2076891_001_main.jpg",
+        "name": "ADIDAS Girls' Fleece Hooded Pullover",
+        "brand": "ADIDAS",
+        "discount_price": 87.98,
+        "original_price": 45.00,
+        "gender": "girls",
+        "size": "small",
+        "color" : "black"
+    },
+    {
+        "id": 9,
+        "image": "https://res.cloudinary.com/eastern/image/upload/w_1000,q_auto,f_auto/2076891_001_main.jpg",
+        "name": "ADIDAS Girls' Fleece Hooded Pullover",
+        "brand": "ADIDAS",
+        "discount_price": 533.98,
+        "original_price": 45.00,
+        "gender": "girls",
+        "size": "small",
+        "color" : "black"
+    },
+    {
+        "id": 10,
+        "image": "https://res.cloudinary.com/eastern/image/upload/w_1000,q_auto,f_auto/2076891_001_main.jpg",
+        "name": "ADIDAS Girls' Fleece Hooded Pullover",
+        "brand": "ADIDAS",
+        "discount_price": 345.98,
+        "original_price": 45.00,
+        "gender": "girls",
+        "size": "small",
+        "color" : "black"
+    }
+]

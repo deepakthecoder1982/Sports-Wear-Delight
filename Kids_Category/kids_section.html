@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kids Category</title>
     <link rel="stylesheet" href="kids_section.css">
+    <script src="./kids_section.js"></script>
 </head>
 
 <body>
@@ -116,6 +117,7 @@
                 </div>
 
             </details>
+
             <hr class="filterHr">
             <!-- COLOR -->
             <details id="color">
@@ -159,6 +161,7 @@
 
 
             </details>
+
             <hr class="filterHr">
             <!-- SIZE -->
             <details id="size">
@@ -190,6 +193,7 @@
                 </div>
 
             </details>
+
             <hr class="filterHr">
             <!-- BRANDS -->
             <details id="brand">
@@ -220,6 +224,7 @@
                 </div>
 
             </details>
+
             <hr class="filterHr">
 
             <div id="lastBox">
@@ -230,7 +235,7 @@
                 <br>
                 <i class="fa-solid fa-arrow-right-arrow-left"></i> <span>Easy Returns, Refunds & Exchanges</span>
                 <br>
-                <a href="#">View rteurns policy</a>
+                <a href="#">View returns policy</a>
 
             </div>
         </div>
@@ -238,25 +243,26 @@
         <div id="productBox">
             <!-- SORTED AND PAGINATION TAGS -->
             <div id="productBox_head">
-                <p><span>0</span> Products</p>
+                <p>Total Products: <span id="totalProducts">0</span></p>
                 <select id="pagination">
                     <option value="">Products/Page</option>
                     <option value="40">40 products / page</option>
                     <option value="80">80 products / page</option>
                     <option value="120">120 products / page</option>
                 </select>
-                <select id="sort by price">
-                    <option value="">Sort By: Price</option>
+                <select id="sortByPrice">
+                    <option value="">Sort By Price</option>
                     <option value="highToLow">High To Low</option>
                     <option value="lowToHigh">Low To High</option>
                 </select>
             </div>
             <!-- PRODUCTS -->
             <div id="productBox_body">
-
+               
             </div>
         </div>
     </div>
+    
 </body>
 <script src="https://kit.fontawesome.com/1631144f83.js" crossorigin="anonymous"></script>
 
