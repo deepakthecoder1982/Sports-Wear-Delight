@@ -4,7 +4,8 @@
     /* padding: 30px; */
     /* border: 2px solid red; */
     /* background-color:rgb(128, 128, 128); */
-    background-color: wheat;
+    /* background-color: wheat; */
+    background-color: darkslateblue;
 }
 .form-content{
     max-width: 430px;
@@ -77,9 +78,16 @@ form .field{
 }
 form a{
     text-decoration: none;
-    color: blue;
+    /* color: blue; */
+    color: rgb(255, 0, 21);
 }
 
 form a:hover{
     text-decoration: underline;
+}
+
+#eye{
+    position: relative;
+    bottom: 30px;
+    left: 350px;
 }

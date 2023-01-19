@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SignIn</title>
     <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
 </head>
 <body>
     <div class="form login"> 
@@ -17,6 +18,7 @@
                 </div>
                 <div class="field input-field">
                     <input id="passIn" type="password" placeholder="Password" class="password">
+                    <i id="eye" class="fa-sharp fa-solid fa-eye"></i>
                 </div>
                 <div class="form-link">
                     <a href="#" class="forgot-pass">Forgot Password?</a>
@@ -40,16 +42,24 @@
     }
     let signInForm=document.getElementById("signIn");
     signInForm.addEventListener("submit",()=>{
-        console.log(customers)
+        console.log(customers);
+        let flag=false;
         for(let customer of customers){
             if(signInForm.mailIn.value==customer.email && signInForm.passIn.value==customer.pass ){
                 alert(`Very welcome ${customer.name}`);
-                break;
+                flag=true;
+                return;
             }
-            else{
-                alert("wrong credentials")
-            }
+            
         }
+        if(!flag){
+            alert("enter the correct credential please")
+        }
+    })
+    let eye=document.getElementById("eye");
+    eye.addEventListener("click",()=>{
+        let passText=document.querySelector("#passIn");
+        passText.type='text';
     })
 </script>
 </html>

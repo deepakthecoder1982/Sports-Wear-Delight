@@ -15,7 +15,7 @@
 } */
 
 .form{
-    background-color: wheat;
+    background-color: darkslateblue;
     max-width: 450px;
     margin: auto;
     margin-top: 50px;
@@ -48,6 +48,9 @@ form .field{
     background-color: rgb(0, 128, 109);
     color: white;
 }
+/* #login:hover{
+    color: chartreuse;
+} */
 .field input,
 .field button{
     height: 100%;
@@ -63,14 +66,13 @@ form .field{
     border: 1px solid #CACACA;
     padding: 0 15px;
 }
-/* .field button{
-    background-color: rgb(255, 127, 133);
-} */
+
 .form-link{
     text-align: center;
     margin-top: 10px;
 }
-.login-link input{
+
+/* .login-link input{
     position: relative;
     margin-top: 20px;
     justify-content: center;
@@ -79,7 +81,7 @@ form .field{
     border-radius: 10px;
     border: none;
     font-size: large;
-}
+} */
 .form-link span,
 .form-link a{
     font-size: 14px;
@@ -87,9 +89,15 @@ form .field{
 }
 form a{
     text-decoration: none;
-    color: blue;
+    color: rgb(255, 0, 21);
 }
 
 form a:hover{
     text-decoration: underline;
+}
+
+#eye{
+    position: relative;
+    bottom: 30px;
+    left: 350px;
 }
