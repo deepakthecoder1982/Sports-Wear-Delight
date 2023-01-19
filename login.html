@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignIn</title>
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+</head>
+<body>
+    <div class="form login"> 
+        <div class="form-content">
+            <header>Sign In</header>
+            <form id="signIn" action="#">
+                <div class="field input-field">
+                    <input id="mailIn" type="email" placeholder="Email" class="input">
+                </div>
+                <div class="field input-field">
+                    <input id="passIn" type="password" placeholder="Password" class="password">
+                    <i id="eye" class="fa-sharp fa-solid fa-eye"></i>
+                </div>
+                <div class="form-link">
+                    <a href="#" class="forgot-pass">Forgot Password?</a>
+                </div>
+                <div class="field button-field">
+                    <!-- <button>Login</button> -->
+                    <input id="login" type="submit" value="Login" />
+                </div>
+
+                <div class="form-link">
+                    <span>Already have an Account?<a href="signup.html" class="signup-link">SignUp</a></span>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+<script>
+    let customers=JSON.parse(localStorage.getItem("customers"));
+    if(customers==null){
+        customers=[];
+    }
+    let signInForm=document.getElementById("signIn");
+    signInForm.addEventListener("submit",()=>{
+        console.log(customers);
+        let flag=false;
+        for(let customer of customers){
+            if(signInForm.mailIn.value==customer.email && signInForm.passIn.value==customer.pass ){
+                alert(`Very welcome ${customer.name}`);
+                flag=true;
+                return;
+            }
+            
+        }
+        if(!flag){
+            alert("enter the correct credential please")
+        }
+    })
+    let eye=document.getElementById("eye");
+    eye.addEventListener("click",()=>{
+        let passText=document.querySelector("#passIn");
+        passText.type='text';
+    })
+</script>
+</html>
