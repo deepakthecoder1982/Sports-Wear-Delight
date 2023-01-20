@@ -15,7 +15,9 @@
 } */
 
 .form{
-    background-color: darkslateblue;
+    /* background-color:; */
+    background-color: dodgerblue;
+
     max-width: 450px;
     margin: auto;
     margin-top: 50px;
@@ -33,7 +35,7 @@ header{
     font-size: 28px;
     font-weight: 600;
     text-align: center;
-    color: black;
+    color: white;
 }
 form {
     margin-top: 30px;
@@ -89,7 +91,7 @@ form .field{
 }
 form a{
     text-decoration: none;
-    color: rgb(255, 0, 21);
+    color: blue;
 }
 
 form a:hover{
@@ -100,4 +102,7 @@ form a:hover{
     position: relative;
     bottom: 30px;
     left: 350px;
+}
+.field input:hover{
+    background-color: azure;
 }

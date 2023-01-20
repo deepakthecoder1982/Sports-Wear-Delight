@@ -4,8 +4,8 @@
     /* padding: 30px; */
     /* border: 2px solid red; */
     /* background-color:rgb(128, 128, 128); */
-    /* background-color: wheat; */
-    background-color: darkslateblue;
+    background-color: dodgerblue;
+    /* background-color: rgb(61, 93, 139); */
 }
 .form-content{
     max-width: 430px;
@@ -21,7 +21,7 @@ header{
     font-size: 28px;
     font-weight: 600;
     text-align: center;
-    color: black;
+    color: white;
     margin-right: 50px;
 }
 form {
@@ -78,8 +78,8 @@ form .field{
 }
 form a{
     text-decoration: none;
-    /* color: blue; */
-    color: rgb(255, 0, 21);
+    
+    color: blue;
 }
 
 form a:hover{
@@ -90,4 +90,9 @@ form a:hover{
     position: relative;
     bottom: 30px;
     left: 350px;
+}
+.login-link input:hover{
+    background-color:  #fff;
+    width: 260px;
+    color: black;
 }
