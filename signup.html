@@ -65,6 +65,10 @@
             return
         }
         let phone=formData.phone.value;
+        if(phone.length<10 || phone.length>10 ){
+            alert("phone number must be of 10 digits");
+            return;
+        }
         let pass=formData.pass.value;
         
         if(phone.length==0 || name.length==0){

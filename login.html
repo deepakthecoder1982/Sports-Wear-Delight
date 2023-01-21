@@ -43,11 +43,18 @@
     let signInForm=document.getElementById("signIn");
     signInForm.addEventListener("submit",()=>{
         console.log(customers);
+       
         let flag=false;
         for(let customer of customers){
             if(signInForm.mailIn.value==customer.email && signInForm.passIn.value==customer.pass ){
                 alert(`Very welcome ${customer.name}`);
                 flag=true;
+                let name=customer.name;
+                let email=customer.email;
+                let phone=customer.phone;
+                let obj={name,email,phone};
+                console.log(obj)
+                localStorage.setItem("loggedCustomer",JSON.stringify(obj))
                 return;
             }
             
