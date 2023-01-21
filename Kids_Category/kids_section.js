@@ -3,7 +3,9 @@ fetch("./data.json")
         return res.json();
     })
     .then((data) => {
+
         console.log(data);
+
         document.getElementById("totalProducts").innerText = data.length;
         window.addEventListener("load", () => {
             renderCards(data);
@@ -17,6 +19,9 @@ fetch("./data.json")
 function renderCards(data) {
     let mainSection = document.getElementById("productBox_body");
     mainSection.innerHTML = null;
+
+
+    let kidsCategoryData = [];
 
     let sortByPrice = document.getElementById("sortByPrice");
 
@@ -34,7 +39,6 @@ function renderCards(data) {
         renderCards(data)
         
     });
-
 }
 
 function getCard(name, image, brand, discount_price, original_price) {
@@ -55,30 +59,6 @@ function getCard(name, image, brand, discount_price, original_price) {
         `
     return card;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -204,3 +184,4 @@ function getCard(name, image, brand, discount_price, original_price) {
 // }
 
 // showData()
+
