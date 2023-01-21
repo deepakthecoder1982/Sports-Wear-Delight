@@ -5,8 +5,9 @@ fetch("./data.json")
     .then((data) => {
         console.log(data);
         document.getElementById("totalProducts").innerText = data.length;
-        // localStorage.setItem("kidsData", JSON.stringify(data));
-        renderCards(data);
+        window.addEventListener("load", () => {
+            renderCards(data);
+        })
     })
     .catch((err) => {
         console.log(err);
@@ -15,12 +16,25 @@ fetch("./data.json")
 
 function renderCards(data) {
     let mainSection = document.getElementById("productBox_body");
-    let kidsCategoryData = [];
-    let sortByPrice = document.getElementById("sortByPrice");
+    mainSection.innerHTML = null;
 
+    let sortByPrice = document.getElementById("sortByPrice");
 
     let cards = data.map(item => getCard(item.name, item.image, item.brand, item.discount_price, item.original_price)).join("");
     mainSection.innerHTML = cards;
+
+    sortByPrice.addEventListener("change", function (e) {
+        console.log(sortByPrice.value);
+
+        if (sortByPrice.value == "highToLow") {
+            data.sort((a, b) => b.discount_price - a.discount_price);
+        } else if (sortByPrice.value == "lowToHigh") {
+            data.sort((a, b) => a.discount_price - b.discount_price);
+        }
+        renderCards(data)
+        
+    });
+
 }
 
 function getCard(name, image, brand, discount_price, original_price) {
@@ -39,9 +53,26 @@ function getCard(name, image, brand, discount_price, original_price) {
             </div>
         </div>
         `
-
     return card;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
