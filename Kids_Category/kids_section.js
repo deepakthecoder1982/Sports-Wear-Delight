@@ -3,9 +3,10 @@ fetch("./data.json")
         return res.json();
     })
     .then((data) => {
-        // console.log(data);
+        console.log(data);
         document.getElementById("totalProducts").innerText = data.length;
-        renderCards(data)
+        // localStorage.setItem("kidsData", JSON.stringify(data));
+        renderCards(data);
     })
     .catch((err) => {
         console.log(err);
@@ -14,21 +15,12 @@ fetch("./data.json")
 
 function renderCards(data) {
     let mainSection = document.getElementById("productBox_body");
+    let kidsCategoryData = [];
     let sortByPrice = document.getElementById("sortByPrice");
 
 
     let cards = data.map(item => getCard(item.name, item.image, item.brand, item.discount_price, item.original_price)).join("");
-
     mainSection.innerHTML = cards;
-    sortByPrice.addEventListener("change", function (e) {
-        if (sortByPrice.value == "highToLow") {
-            data.sort((a, b) => (a.discount_price < b.discount_price ? 1 : -1));
-        } else if (sortByPrice.value == "lowToHigh") {
-            data.sort((a, b) => (a.discount_price > b.discount_price ? 1 : -1));
-        }
-        mainSection.innerHTML = JSON.stringify(data)
-    });
-
 }
 
 function getCard(name, image, brand, discount_price, original_price) {
@@ -50,7 +42,6 @@ function getCard(name, image, brand, discount_price, original_price) {
 
     return card;
 }
-
 
 
 
@@ -138,3 +129,47 @@ function getCard(name, image, brand, discount_price, original_price) {
 
 // let totalProducts = document.querySelector("#totalPrd");
 // totalProducts.innerText = NewProducts.length;
+
+//*********************************************************************** */
+
+// function showData(data){
+
+//     data.forEach((element,index)=>{
+//         let card = document.createElement("div");
+//         card.classList.add("card");
+
+//         let cardImage = document.createElement("div");
+//         cardImage.classList.add("cardImage");
+
+//         let image = document.createElement("img");
+//         image.setAttribute("src",element.image);
+
+//         let cardDetails = document.createElement("div");
+//         cardDetails.classList.add("cardDetails");
+
+//         let aBrand = document.createElement("a");
+//         abrand.setAttribute("href",element.brand);
+
+//         let aName = document.createElement("a");
+//         aName.setAttribute("href",element.name);
+
+//         let discountPrice = document.createElement("span");
+//         discountPrice.textContent = element.discount_price;
+
+//         let originalPrice = document.createElement("s");
+//         originalPrice.textContent = element.original_price;
+
+//         let coverOriginalPrice = document.createElement("span");
+
+
+//         cardImage.append(image);
+//         coverOriginalPrice.append(originalPrice)
+//         cardDetails.append(aBrand,aName,discountPrice,coverOriginalPrice);
+//         card.append(cardImage,cardDetails);
+//         mainSection.append(card);
+
+//     })
+
+// }
+
+// showData()
