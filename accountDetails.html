@@ -7,72 +7,88 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Account Dtails</title>
     <style>
+        .accountDtails{
+            margin: 10rem auto ;
+        }
         #top {
             width: 100%;
             display: flex;
-            /* border: 1px solid; */
-            margin: auto;
+            border-bottom: 1px solid rgba(57, 55, 55, 0.498);
+            margin: 1rem auto ;
+            padding-bottom: 3rem  ;
             justify-content: space-around;
-            box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+            /* box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px; */
             /* background-color: white; */
         }
-        #right{
+
+        #right {
             display: none;
             margin-top: 20px;
             margin-bottom: 20px;
             border: 1px solid;
-            width:40%;
+            width: 40%;
             height: 60%;
             padding: 0px 70px;
             /* text-align: center; */
+            border-radius: .4rem;
         }
-        .edits{
+
+        .edits {
             display: flex;
             justify-content: space-between;
         }
-        .edits a{
+
+        .edits a {
             margin-top: 17px;
             font-size: large;
             text-decoration: none;
             color: gray;
         }
-        .edits a:hover{
+
+        .edits a:hover {
             text-decoration: underline;
             color: blue;
         }
-        
-        
+
+        #password input[type='password'] {
+            border: none;
+        }
+
+        #password input[type="password"]:focus {
+            outline: none;
+        }
     </style>
 </head>
 
 <body>
     <div class="accountDtails">
 
-       
+
         <div id="top">
-            
+
             <div id="left">
-                <h2 >My Account</h2>
+                <h2>My Account</h2>
                 <h3>Pesonal Data</h3>
-                <p>Your personal data is always kept safe and</p>
-                <p>secure, and never shared with third parties.</p>
+                <span>Your personal data is always kept safe and</span><br>
+                <span>secure, and never shared with third parties.</span>
             </div>
             <div id="right">
-                <div class="edits"> <p id="name">Name  </p>
+                <div class="edits">
+                    <p id="name">Name </p>
                     <a href="#">Edit</a>
                 </div>
-               
+
                 <p id="email">mashahnwaj@gmail.com</p>
-                
-                <div class="edits" id="password"> 
-                    <p id="pass">343</p>
+
+                <div class="edits" id="password">
+                    <p id="pass">Pass: <input type="password" value="343" class="pass"></p>
                     <a href="#">Edit</a>
                 </div>
                 <!-- <div id="edits">  
                     <a href="#">Edit</a>
                     <a href="#">Edit</a>
                 </div> -->
-              
+
             </div>
         </div>
         <div class="bottom">
@@ -80,7 +96,7 @@
                 <h3>Recent Activities</h3>
             </div>
         </div>
-        
+
 
     </div>
 
@@ -93,15 +109,16 @@
     name.innerText = `Name:      ${loggedCustomer.name}`;
     let email = document.getElementById("email");
     email.innerText = `Email:      ${loggedCustomer.email}`;
-    let pass = document.getElementById("pass");
-    pass.innerText = `Password:      ${loggedCustomer.pass}`;
-    let clickBtn=document.querySelector("h2");
-    clickBtn.addEventListener("click",(e)=>{
+    let pass = document.querySelector(".pass");
+    pass.value = loggedCustomer.pass;
+    console.log(pass.value = loggedCustomer.pass);
+    let clickBtn = document.querySelector("h2");
+    clickBtn.addEventListener("click", (e) => {
         e.preventDefault();
-        document.querySelector("#right").style.display="block";
+        document.querySelector("#right").style.display = "block";
     })
 </script>
- <!-- input[type='password']{
+<!-- input[type='password']{
     border:none;
 }
 input[type="password"]:focus{
