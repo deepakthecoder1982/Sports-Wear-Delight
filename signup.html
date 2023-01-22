@@ -18,17 +18,23 @@
             <form id="signUp" action="#">
                 <div class="field input-field">
                     <input id="name" type="text" placeholder="Name" class="name">
+                    <!-- <div class="message" id="nameMessage">name should be atleast of four characters</div> -->
                 </div>
                 <div class="field input-field">
-                    <input id="mail" type="email" placeholder="Email" class="input">
+                    <input id="mail" type="email" placeholder="Email" class="mail">
+                    <div class="message" id="mailMessage"></div>
                 </div>
                 <div class="field input-field">
-                    <input id="phone" type="number" placeholder="Phone" class="password">
-                    <!-- <i id="eye" class="fa-sharp fa-solid fa-eye"></i> -->
+                    <input id="phone" type="number" placeholder="Phone" class="phone">
+                    <div class="message" id="phoneMessage"></div>
+
+
                 </div>
                 <div class="field input-field">
-                    <input id="pass" type="password" placeholder="Password" class="password">
-                    <i id="eye" class="fa-sharp fa-solid fa-eye"></i>
+                    <input id="passIn" type="password" placeholder="Password" class="password">
+                    <i id="eyeOpen" class="fa-sharp fa-solid fa-eye "></i>
+                    <i id='eyeClosed'class="fa-solid fa-eye-slash"></i>
+                    <div id="passMessage"></div>
                 </div>
 
                 <div class="login-link">
@@ -50,10 +56,22 @@
         customers=[];
     }
     let formData=document.querySelector("form");
-    formData.addEventListener("submit",()=>{
+    formData.addEventListener("submit",(e)=>{
+        e.preventDefault();
         let name=formData.name.value;
         let email=formData.mail.value;
+        let phone=formData.phone.value;
+        let pass=formData.passIn.value;
         let flag=false;
+        if(!name || !phone || !email || !pass){
+            alert("please enter the required fields!");
+            return;
+        }
+        if(name.length<4){
+            alert("name should be atleast of four characters");
+            // document.querySelector("#nameMessage").style.display="block";
+            return
+        }
         for(let customer of customers){
             if(customer.email==email){
                 flag=true;
@@ -62,32 +80,58 @@
         }
         if(flag){
             alert(`${email} has already been used`);
+        //     swal({
+        // //     //         title:`${email} has already been used` ,
+        // //     //         text: "Sign in Unsuccessfull!",
+        // //     //         icon: "error",
+        // //     //         button: "try again",
+        // //     //       }).then(()=>{
+        // //     //         // event.preventDefault();
+        // //     //         // window.location = "menu.html";
+        // //     //     });
             return
         }
-        let phone=formData.phone.value;
+        
         if(phone.length<10 || phone.length>10 ){
             alert("phone number must be of 10 digits");
-            return;
+            return; 
         }
-        let pass=formData.pass.value;
         
-        if(phone.length==0 || name.length==0){
-            alert("please enter the required fields!");
-            return;
-        }
+            swal({
+                    title:`Congratulations dear ${name}, welcome! ` ,
+                    text: "Sigup Successfull!",
+                    icon: `U are registered here with ${email}`,
+                    button: "now you can login",
+                  }).then(()=>{
+                    // event.preventDefault();
+                    // window.location = "menu.html";
+                });
+        
         let obj={name,email,phone,pass};
         customers.push(obj);
-        console.log(obj)
+        // console.log(obj)
         localStorage.setItem("customers",JSON.stringify(customers));
         console.log(customers)
-    })
+    });
 
-    let eye=document.getElementById("eye");
-    eye.addEventListener("click",()=>{
-        let passText=document.querySelector("#pass");
+    let eyeClosed=document.getElementById("eyeClosed");
+    let eyeOpen=document.getElementById("eyeOpen");
+    eyeClosed.addEventListener("click",()=>{
+        let passText=document.querySelector("#passIn");
+        eyeOpen.style.display = "block";
+        eyeClosed.style.display = "none";
+        // eyeOpen.classList.add('show');
         passText.type='text';
     })
+    eyeOpen.addEventListener("click",()=>{
+        let passText=document.querySelector("#passIn");
+        eyeOpen.style.display = "none";
+        eyeClosed.style.display = "block";
+        passText.type='password';
+    })
+    
 </script>
 
 </html>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js" integrity="sha512-AA1Bzp5Q0K1KanKKmvN/4d3IRKVlv9PYgwFPvm32nPO6QS8yH1HO7LbgB1pgiOxPtfeg5zEn2ba64MUcqJx6CA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
  <!-- localStorage.setItem("formData", JSON.stringify(userData)); -->

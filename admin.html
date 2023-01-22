@@ -14,14 +14,22 @@
     box-sizing: border-box;
 
 }
-.form{
-    /* background-color:; */
-    background-color: dodgerblue;
+body{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-image:linear-gradient(to right,indigo,rgb(243,4,49)) ;
 
+}
+.form{
+    max-width: 450px;
+    margin: auto;
+    margin-top: 50px; 
+    background-color: #0d58a1;
     max-width: 450px;
     margin: auto;
     margin-top: 50px;
-    border-radius:6px ;
+    background-image: linear-gradient(45deg, black, transparent);
+    border-radius: 1.2rem;
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
 }
 .form-content{
     
@@ -65,14 +73,35 @@ form .field{
     border: 1px solid #CACACA;
     padding: 0 15px;
 }
-#eye{
+#eyeClosed{
     position: relative;
     bottom: 30px;
     left: 350px;
 }
+#eyeOpen{
+    position: relative;
+    display: none;
+    bottom: 30px;
+    left: 350px;
+}
+.show{
+    display: block;
+}
 .field input:hover{
     background-color: azure;
 }
+.field input[type='email']{
+    border:none;
+}
+.field input[type="email"]:focus{
+outline:none;
+} 
+.field input[type='password']{
+    border:none;
+}
+.field input[type="password"]:focus{
+outline:none;
+} 
     </style>
 </head>
 
@@ -86,7 +115,8 @@ form .field{
                 </div>
                 <div class="field input-field">
                     <input id="passIn" type="password" placeholder="Password" class="password">
-                    <i id="eye" class="fa-sharp fa-solid fa-eye"></i>
+                    <i id="eyeOpen" class="fa-sharp fa-solid fa-eye "></i>
+                    <i id='eyeClosed'class="fa-solid fa-eye-slash"></i>
                 </div>
                 <div class="field button-field">
                     <!-- <button>Login</button> -->
@@ -102,8 +132,9 @@ form .field{
 </html>
 <script>
     let logBtn=document.getElementById("login");
+    let form=document.querySelector("form");
     // let admins=["mshahnwaj10@gmail.com", "deepak@gmail.com"]
-    logBtn.addEventListener("submit",()=>{
+    form.addEventListener("submit",()=>{
         
         if(form.passIn.value=="admin"){
             alert("login successful");
@@ -112,9 +143,20 @@ form .field{
             alert("enter the correct credentials")
         }
     })
-    let eye=document.getElementById("eye");
-    eye.addEventListener("click",()=>{
+    let eyeClosed=document.getElementById("eyeClosed");
+    let eyeOpen=document.getElementById("eyeOpen");
+    eyeClosed.addEventListener("click",()=>{
         let passText=document.querySelector("#passIn");
+        eyeOpen.style.display = "block";
+        eyeClosed.style.display = "none";
+        // eyeOpen.classList.add('show');
         passText.type='text';
     })
+    eyeOpen.addEventListener("click",()=>{
+        let passText=document.querySelector("#passIn");
+        eyeOpen.style.display = "none";
+        eyeClosed.style.display = "block";
+        passText.type='password';
+    })
 </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js" integrity="sha512-AA1Bzp5Q0K1KanKKmvN/4d3IRKVlv9PYgwFPvm32nPO6QS8yH1HO7LbgB1pgiOxPtfeg5zEn2ba64MUcqJx6CA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
