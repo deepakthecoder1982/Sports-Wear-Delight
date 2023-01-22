@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart Page</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --font-family: Futura, Trebuchet MS, Arial, sans-serif;
+            --fav-color:rgba(243,4,49);
+        }
+
+        body {
+            font-family: var(--font-family);
+            z-index: 0;
+        }
+
+        .preloader {
+            width: 100%;
+            height: 100vh;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            background-color: rgb(30 30 36);
+            z-index: 1000;
+        }
+
+        .preloader img {
+            position: absolute;
+            width: 40%;
+            top: 30%;
+            left: 30%;
+            opacity: 1;
+        }
+        #CartSection{
+            display: flex;
+            width: 80%;
+        }
+        #cartSection #cart_products .products img{
+            width: 10%;
+            display: none;
+        }
+        #checkoutPage{
+            width: 40%;
+            height:100%;
+            border: 1px solid ;
+            padding: 1rem;
+            background-color: rgba(180, 169, 169, 0.531);
+        }
+        #cart_products{
+            width: 40%;
+        }
+    </style>
+</head>
+
+<body>
+    <nav id="navbar">
+
+    </nav>
+
+    <!-- shoping cart functionality works here -->
+    <section id="CartSection">
+        <div id="cart_products">
+            <div class="products">
+                <!-- <img src="https://res.cloudinary.com/eastern/image/upload/w_1000,q_auto,f_auto/2076695_502_main.jpg" alt=""> -->
+                <p class="title">EMS Women's Find Adventure Short Sleeve Crewneck Graphic Tee</p>
+                <p class="colorandsize">Gold,size</p>
+                <p class="price">$69.99 <span class="prevPrice" style="text-decoration:dashed";">$99.99</span> <span class="offer">30% off</span></p>
+                <button id="incrementt">+</button><span id="quantityShow">0</span><button id="decrementt">-</button>
+            </div>
+        </div>
+        <div id="checkoutPage">
+            <div class="upperClass">
+                <p class="bold">Order summary</p>
+                <p class="empty">Subtotal:<span id="appendTotalCost">$69.99</span></p>
+                <p class="empty">shipping:<span>-</span></p>
+                <p class="empty">shipping:<span>-</span></p>
+            </div>
+            <div id="TotalCost">
+                <p class="Total bold">Total <span id="FinalCost">$69.99</span></p>
+                <button id="CheckOut">Checkout</button>
+            </div>
+            <div id="paymentsType">
+                    <span class="bold">Payments:</span>
+                    <img class="ImgPaymentType" src="https://www.ems.com/assets/1e17b54d.svg" alt="">
+                    <img class="ImgPaymentType" src="https://www.ems.com/assets/6db70e0b.svg" alt="">
+                    <img class="ImgPaymentType" src="https://www.ems.com/assets/8c29e6cf.svg" alt="">
+                    <img class="ImgPaymentType" src="https://www.ems.com/assets/e2ef118a.svg" alt="">
+                    <img class="ImgPaymentType" src="https://www.ems.com/assets/4c78d0d1.svg" alt="">
+                    <img class="ImgPaymentType" src="https://www.ems.com/assets/a4280dfb.svg" alt="">
+                </div>
+                <div class="shipping">
+                    <span class="bold">Shipping:</span> <a href="#">From $799-Free when you spend $999</a>
+                </div>
+                <div class="returns">
+                    <span class="bold"><a href="#">Easy returns</a></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- //this is the preloader section  -->
+    <div class="preloader">
+        <img src="./PreloaderImage.gif" alt="" id='preloader'>
+    </div>
+    <!-- //It is done -->
+</body>
+
+</html>
+<script>
+    //preloader javscript
+    let preloader = document.querySelector('.preloader');
+    let opacity = 1;
+    window.onload = () => {
+        let value = 0.2;
+        setInterval(() => {
+            value += 0.3;
+            preloader.style.opacity = opacity - value;
+            preloader.style.transitionDuration = "2s";
+        }, 180);
+    }
+    console.log(preloader.style.opacity.value)
+</script>
