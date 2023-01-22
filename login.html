@@ -18,7 +18,8 @@
                 </div>
                 <div class="field input-field">
                     <input id="passIn" type="password" placeholder="Password" class="password">
-                    <i id="eye" class="fa-sharp fa-solid fa-eye"></i>
+                    <i id="eyeOpen" class="fa-sharp fa-solid fa-eye "></i>
+                    <i id='eyeClosed'class="fa-solid fa-eye-slash"></i>
                 </div>
                 <div class="form-link">
                     <a href="#" class="forgot-pass">Forgot Password?</a>
@@ -41,13 +42,33 @@
         customers=[];
     }
     let signInForm=document.getElementById("signIn");
-    signInForm.addEventListener("submit",()=>{
+    signInForm.addEventListener("submit",(e)=>{
+        e.preventDefault();
         console.log(customers);
+       
         let flag=false;
         for(let customer of customers){
             if(signInForm.mailIn.value==customer.email && signInForm.passIn.value==customer.pass ){
-                alert(`Very welcome ${customer.name}`);
+                // alert(`Very welcome ${customer.name}`);
+                     swal({
+                  title:`Very welcome ${customer.name}, you have logged in with ${customer.email}` ,
+                  text: "Sign in successfull!",
+                 icon:`${customer.email}`,
+                   button: "go ahead!",
+                      }).then(()=>{
+                 // event.preventDefault();
+                // window.location = "menu.html";
+          });
+            // return
+        
                 flag=true;
+                let name=customer.name;
+                let email=customer.email;
+                // let phone=customer.phone;
+                let pass=customer.pass;
+                let obj={name,email,pass};
+                console.log(obj)
+                localStorage.setItem("loggedCustomer",JSON.stringify(obj))
                 return;
             }
             
@@ -55,11 +76,26 @@
         if(!flag){
             alert("enter the correct credential please")
         }
-    })
-    let eye=document.getElementById("eye");
-    eye.addEventListener("click",()=>{
+    });
+    let eyeClosed=document.getElementById("eyeClosed");
+    let eyeOpen=document.getElementById("eyeOpen");
+    eyeClosed.addEventListener("click",()=>{
         let passText=document.querySelector("#passIn");
+        eyeOpen.style.display = "block";
+        eyeClosed.style.display = "none";
+        // eyeOpen.classList.add('show');
         passText.type='text';
     })
+    eyeOpen.addEventListener("click",()=>{
+        let passText=document.querySelector("#passIn");
+        eyeOpen.style.display = "none";
+        eyeClosed.style.display = "block";
+        passText.type='password';
+    })
+    
+
 </script>
 </html>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js" integrity="sha512-AA1Bzp5Q0K1KanKKmvN/4d3IRKVlv9PYgwFPvm32nPO6QS8yH1HO7LbgB1pgiOxPtfeg5zEn2ba64MUcqJx6CA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<!-- <i id="eyeClosed" class="fa-sharp fa-solid fa-eye"></i>
+<i id='eyeOpen'class="fa-solid fa-eye-slash"></i> -->

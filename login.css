@@ -4,6 +4,11 @@
     box-sizing: border-box;
 
 }
+body{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-image:linear-gradient(to right,indigo,rgb(243,4,49)) ;
+
+}
 /* .container{
     height: 100vh;
     width: 100%;
@@ -15,10 +20,19 @@
 } */
 
 .form{
-    background-color: darkslateblue;
+    /* background-color:; */
+    /* background-color: dodgerblue;
+
+    max-width: 450px;
+    margin: auto;
+    margin-top: 50px; */
+    background-color: #0d58a1;
     max-width: 450px;
     margin: auto;
     margin-top: 50px;
+    background-image: linear-gradient(45deg, black, transparent);
+    border-radius: 1.2rem;
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
 }
 .form-content{
     /* max-width: 430px; */
@@ -33,7 +47,7 @@ header{
     font-size: 28px;
     font-weight: 600;
     text-align: center;
-    color: black;
+    color: white;
 }
 form {
     margin-top: 30px;
@@ -89,15 +103,54 @@ form .field{
 }
 form a{
     text-decoration: none;
-    color: rgb(255, 0, 21);
+    color: rgba(55, 55, 244, 0.395);
+    color: #fff;
 }
 
 form a:hover{
     text-decoration: underline;
 }
+span{
+    color: gray;
+}
+span a{
+    padding-left: .3rem;
+}
 
-#eye{
+#eyeClosed{
     position: relative;
     bottom: 30px;
     left: 350px;
 }
+#eyeOpen{
+    position: relative;
+    display: none;
+    bottom: 30px;
+    left: 350px;
+}
+.show{
+    display: block;
+}
+.field input:hover{
+    background-color: azure;
+}
+
+#login:hover{
+    background-color: #fff;
+    border: none;
+    color: black;
+    cursor: pointer;
+    font-weight: bolder;
+}
+.field input[type='password']{
+    border:none;
+}
+.field input[type="password"]:focus{
+outline:none;
+}
+.field input[type='email']{
+    border:none;
+}
+.field input[type="email"]:focus{
+outline:none;
+} 
