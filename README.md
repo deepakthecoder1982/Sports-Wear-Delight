@@ -3,7 +3,7 @@
 Sports Wear Delight is a clone of www.ems.com. Eastern Mountain
 Sports is an online retail company offering outdoor gear, apparel,
 and accessories, as well as helpful resources for outdoor enthusiasts.
-
+ # Deployed Link : https://amazing-concha-0e1468.netlify.app/
 
 Group Project 
 # Team Members
@@ -21,6 +21,7 @@ Group Project
 
 
 
+
 # Women Page
 ![image](https://user-images.githubusercontent.com/110231091/223406922-db6972f6-a5dc-4acd-9acf-4537e028b828.png)
 
@@ -30,11 +31,12 @@ Group Project
 
 
 
-# Individual Product Page
+# Login/SignUp Page
 ![image](https://user-images.githubusercontent.com/110231091/223404627-4cb3d993-1fc4-4e89-bb57-23ff920e93c7.png)
 
 
-# Login/SignUp Page
-![image](https://user-images.githubusercontent.com/110231091/223403173-f66df91d-b5ef-4b8a-84ac-54134b894573.png)
+# Individual Product Page
+![Uploading image.png…]()
+
 
 
