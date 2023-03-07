@@ -5,7 +5,8 @@ Sports is an online retail company offering outdoor gear, apparel,
 and accessories, as well as helpful resources for outdoor enthusiasts.
 Group Project 
 ======= 
-Team Members
+# Team Members
+
 1). Deppak Yadav
 2). Ritesh Kumar Shukla
 3). Kirti D. Bhosale
