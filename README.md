@@ -15,24 +15,24 @@ Team Members
 
 =======
 
-#Landing Page 
+# Landing Page 
 ![image](https://user-images.githubusercontent.com/110231091/223403630-33ba50b8-557b-4c18-bc49-3b87d58d23d0.png)
 
 
-#Women Page
+# Women Page
 ![image](https://user-images.githubusercontent.com/110231091/223405438-0cfd8563-8345-48b4-8da4-11c997ee1dc8.png)
 
 
-#Kid's Page 
+# Kid's Page 
 ![image](https://user-images.githubusercontent.com/110231091/223405592-d1f97498-1277-4797-910a-3c748ad2c29d.png)
 
 
 
-#Individual Product Page
+# Individual Product Page
 ![image](https://user-images.githubusercontent.com/110231091/223404627-4cb3d993-1fc4-4e89-bb57-23ff920e93c7.png)
 
 
-#Login/SignUp Page
+# Login/SignUp Page
 ![image](https://user-images.githubusercontent.com/110231091/223403173-f66df91d-b5ef-4b8a-84ac-54134b894573.png)
 
 
