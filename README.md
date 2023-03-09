@@ -36,7 +36,8 @@ Group Project
 
 
 # Individual Product Page
-![Uploading image.png…]()
+![image](https://user-images.githubusercontent.com/110231091/223997038-ddf02953-583e-4dd9-b87e-51d404e2abec.png)
+
 
 
 
